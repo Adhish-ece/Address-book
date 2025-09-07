@@ -40,7 +40,7 @@ addressbook.exe # Windows
 When the program runs, a menu will appear:
 
 ---
-
+```bash
 ===== Address Book (By Adhish) =====
 1. Add Contact
 2. Search Contact
@@ -49,6 +49,7 @@ When the program runs, a menu will appear:
 5. Print All Contact
 6. Exit
 Enter choice:
+```
 
 ---
 

@@ -41,9 +41,9 @@ Run the program with the command:
 ./addressbook   # Linux/Mac
 addressbook.exe # Windows
 ```
-When the program runs, a menu will appear:
 
 ---
+When the program runs, a menu will appear:
 ```bash
 ===== Address Book (By Adhish) =====
 1. Add Contact

@@ -31,3 +31,13 @@ gcc main.c -o addressbook
 ```
 Here, gcc is the GNU C compiler, main.c is the source file, and -o addressbook tells the compiler to create an executable named addressbook.
 If the compilation is successful, an executable file will be generated (addressbook on Linux/Mac or addressbook.exe on Windows).
+
+Run the program with the command:
+```bash
+./addressbook   # Linux/Mac
+addressbook.exe # Windows
+```
+When the program runs, a menu will appear:
+
+
+

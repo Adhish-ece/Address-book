@@ -16,9 +16,13 @@ It uses **file handling (CSV format)** to store and manage contacts.
 ---
 
 ## How It Works
-- Contacts are stored in a CSV file (`address.csv`)  
-- First line of the file keeps the count of total contacts  
+- Contacts are stored in a CSV file called `address.csv`  
+- The first line of the file keeps the count of total contacts  
 - Each contact record contains: Name, Phone, Email, Location  
+- Phone numbers must be 10 digits  
+- Gmail IDs must contain `@` and `.com`  
+- Duplicate phone numbers or emails are not allowed  
+- All data is stored persistently, so it remains even after closing the program  
 
 ---
 
@@ -50,6 +54,9 @@ When the program runs, a menu will appear:
 6. Exit
 Enter choice:
 ```
+All data is stored in `address.csv`, which is created automatically if it does not exist.  
+Each contact includes Name, Phone, Email, and Location. Phone numbers must be 10 digits, Gmail IDs must contain `@` and `.com`,  
+and duplicate entries are not allowed. This ensures that all data remains safe and persistent even after closing the program.
 
 ---
 

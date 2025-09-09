@@ -101,11 +101,14 @@ void Edit() {
 
     char line[256];
     int updated = 0;
+    char oldPh[20];
+    char oldGm[50];
 
     while (fgets(line, sizeof(line), fp)) {
         Contact c;
         sscanf(line, "%49[^,],%19[^,],%49[^,],%49[^\n]",c.name, c.phone, c.email, c.loc);
-
+        strcpy(oldPh,c.phone);
+        strcpy(oldGm,c.email);
         if (strcmp(c.phone, query) == 0) {
             printf("Editing contact: %s | %s | %s | %s\n", c.name, c.phone, c.email, c.loc);
 
@@ -115,12 +118,20 @@ void Edit() {
             do {
                 printf("Enter new phone (10 digits): ");
                 scanf("%s", c.phone);
-            } while (!ValidatePh(c.phone));
+                if(!ValidatePh(c.phone))
+                printf("Phone number should 10 digit!(or not a charecter)\n");
+                else if(DuplicatePh(c.phone) && strcmp(oldPh,c.phone)!=0)
+                printf("Phone number is already exist!\n");
+            } while (!ValidatePh(c.phone) || (DuplicatePh(c.phone) && strcmp(oldPh,c.phone)!=0));
 
             do {
                 printf("Enter new email: ");
                 scanf("%s", c.email);
-            } while (!ValidateGm(c.email));
+                if(!ValidateGm(c.email))
+                printf("Enter Valid Gmail\n");
+                else if(DuplicateGm(c.email) && strcmp(oldGm,c.email)!=0)
+                printf("Gmail already exist!\n");
+            } while (!ValidateGm(c.email) || (DuplicateGm(c.email) && strcmp(oldGm,c.email)!=0));
 
             printf("Enter new location: ");
             scanf(" %[^\n]", c.loc);

@@ -301,7 +301,7 @@ int validate_name(char *name)
   int flag =1;
   for(int i=0;name[i]!='\0';i++)
   {
-    if(!((name[i]>='a' && name[i]<='z') || (name[i]>='A' && name[i]<='Z') ))
+    if(!((name[i]>='a' && name[i]<='z') || (name[i]>='A' && name[i]<='Z') || name[i]== ' '))
     {
         flag =0;
         break;

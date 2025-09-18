@@ -1,4 +1,6 @@
- //adhish v 
+ /*
+    This project is done by adhish v as a part of emertxe embedded system course
+ */
 #include "utilis.h"
 
 int main()

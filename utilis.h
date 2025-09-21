@@ -4,6 +4,7 @@
 #include<string.h>
 #include<ctype.h>
 #define file "address.csv"
+#define MAX 100
 
 
 typedef struct 

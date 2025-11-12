@@ -28,18 +28,15 @@ It uses **file handling (CSV format)** to store and manage contacts.
 
 ## Compilation & Execution
 
-To run this program, open your terminal or command prompt and navigate to the folder containing `main.c` and `utilis.h`. Compile the program using the command:
+To run this program, open your terminal or command prompt and navigate to the folder 
 
 ```bash
-gcc main.c -o addressbook
+gcc *c
 ```
-Here, gcc is the GNU C compiler, main.c is the source file, and -o addressbook tells the compiler to create an executable named addressbook.
-If the compilation is successful, an executable file will be generated (addressbook on Linux/Mac or addressbook.exe on Windows).
-
 Run the program with the command:
 ```bash
-./addressbook   # Linux/Mac
-addressbook.exe # Windows
+./a.out   # Linux/Mac
+a.exe # Windows
 ```
 
 ---
